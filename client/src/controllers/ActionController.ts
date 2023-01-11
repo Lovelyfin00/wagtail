@@ -9,7 +9,6 @@ import { WAGTAIL_CONFIG } from '../config/wagtailConfig';
  * data-w-action-redirect-url-value="{% url 'wagtailadmin_home' %}"
  * data-w-action-url-value = '{{ view.get_enable_url }}'>Enable</button>
  */
-
 export class ActionController extends Controller {
   static values = {
     redirect: String,
