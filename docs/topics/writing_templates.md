@@ -60,7 +60,7 @@ Any file within the static folder should be inserted into your HTML using the `{
 
 ### User images
 
-Images uploaded to a Wagtail site by its users (as opposed to a developer's static files, mentioned above) go into the image library and from there are added to pages via the [page editor interface](inserting_images).
+Images uploaded to a Wagtail site by its users (as opposed to a developer's static files, mentioned above) go into the image library and from there are added to pages via the page editor interface.
 
 Unlike other CMSs, adding images to a page does not involve choosing a "version" of the image to use. Wagtail has no predefined image "formats" or "sizes". Instead, the template developer defines image manipulation to occur _on the fly_ when the image is requested, via a special syntax within the template.
 
@@ -172,6 +172,20 @@ A `fallback` keyword argument can be provided - this can be a URL string, a name
     </li>
 {% endfor %}
 ```
+
+(fullpageurl_tag)=
+
+### `fullpageurl`
+
+Takes a Page object and returns its absolute URL (`http://example.com/foo/bar/`).
+
+```html+django
+{% load wagtailcore_tags %}
+...
+<meta property="og:url" content="{% fullpageurl page %}" />
+```
+
+Much like `pageurl`, a `fallback` keyword argument may be provided.
 
 (slugurl_tag)=
 
