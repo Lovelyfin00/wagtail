@@ -6,7 +6,6 @@ import { WAGTAIL_CONFIG } from '../config/wagtailConfig';
  * data-controller="w-action"
  * data-action="click->w-action#post"
  * data-w-action-redirect-value="true"
- * data-w-action-redirect-url-value="{% url 'wagtailadmin_home' %}"
  * data-w-action-url-value = '{{ view.get_enable_url }}'>Enable</button>
  */
 export class ActionController extends Controller {
@@ -18,7 +17,6 @@ export class ActionController extends Controller {
 
   urlValue!: string;
   redirectValue!: any;
-  redirectUrlValue!: string;
 
   post(event: Event) {
     event.preventDefault();
@@ -39,10 +37,7 @@ export class ActionController extends Controller {
       const nextElement = document.createElement('input');
       nextElement.type = 'hidden';
       nextElement.name = 'next';
-      nextElement.value =
-        this.redirectValue === 'false'
-          ? window.location.href
-          : this.redirectUrlValue;
+      nextElement.value = window.location.href;
       formElement.appendChild(nextElement);
     }
 
