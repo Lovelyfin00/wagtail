@@ -11,7 +11,6 @@ import { WAGTAIL_CONFIG } from '../config/wagtailConfig';
 export class ActionController extends Controller {
   static values = {
     redirect: String,
-    redirectUrl: String,
     url: String,
   };
 
