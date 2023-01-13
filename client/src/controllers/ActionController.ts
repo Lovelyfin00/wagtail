@@ -15,8 +15,8 @@ export class ActionController extends Controller {
     url: String,
   };
 
-  urlValue!: string;
-  redirectValue!: any;
+  urlValue: string;
+  redirectValue: any;
 
   post(event: Event) {
     event.preventDefault();
