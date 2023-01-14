@@ -33,11 +33,11 @@ export class ActionController extends Controller {
     formElement.appendChild(csrftokenElement);
 
     if (this.redirectValue) {
-      const nextElement = document.createElement('input');
-      nextElement.type = 'hidden';
-      nextElement.name = 'next';
-      nextElement.value = window.location.href;
-      formElement.appendChild(nextElement);
+      const redirectElement = document.createElement('input');
+      redirectElement.type = 'hidden';
+      redirectElement.name = 'redirect';
+      redirectElement.value = window.location.href;
+      formElement.appendChild(redirectElement);
     }
 
     document.body.appendChild(formElement);
