@@ -29,6 +29,6 @@ describe('ActionController', () => {
     expect(submitMock).toHaveBeenCalled();
     expect(form.action).toBe('https://www.github.com/');
     expect(new FormData(form).get('csrfmiddlewaretoken')).toBe('potato');
-    expect(new FormData(form).get('redirect')).toBe('http://localhost/');
+    expect(new FormData(form).get('next')).toBe('http://localhost/');
   });
 });

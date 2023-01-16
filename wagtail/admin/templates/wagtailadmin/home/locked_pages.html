@@ -31,11 +31,14 @@
                             </div>
                             <ul class="actions">
                                 {% if can_remove_locks %}
-                                    <li><button class="button button-small button-secondary"
-                                        data-action="w-action#post"
-                                        data-controller="w-action"
-                                        data-w-action-redirect-value="false"
-                                        data-w-action-url-value="{% url 'wagtailadmin_pages:unlock' page.id %}">{% trans "Unlock" %}</button></li>
+                                    <li>
+                                        <button class="button button-small button-secondary"
+                                            data-action="w-action#post"
+                                            data-controller="w-action"
+                                            data-w-action-redirect-value= "false"
+                                            data-w-action-url-value="{% url 'wagtailadmin_pages:unlock' page.id %}">{% trans "Unlock" %}
+                                        </button>
+                                    </li>
                                 {% endif %}
                                 <li><a href="{% url 'wagtailadmin_pages:edit' page.id %}" class="button button-small button-secondary">{% trans "Edit" %}</a></li>
                                 {% if page.has_unpublished_changes and page.is_previewable %}
