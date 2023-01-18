@@ -32,11 +32,14 @@
                             <ul class="actions">
                                 {% if can_remove_locks %}
                                     <li>
-                                        <button class="button button-small button-secondary"
-                                            data-action="w-action#post"
+                                        <button
+                                            class="button button-small button-secondary"
                                             data-controller="w-action"
-                                            data-w-action-redirect-value= "false"
-                                            data-w-action-url-value="{% url 'wagtailadmin_pages:unlock' page.id %}">{% trans "Unlock" %}
+                                            data-action="w-action#post"
+                                            data-w-action-next-value="{% url 'wagtailadmin_home' %}"
+                                            data-w-action-url-value="{% url 'wagtailadmin_pages:unlock' page.id %}"
+                                        >
+                                            {% trans "Unlock" %}
                                         </button>
                                     </li>
                                 {% endif %}

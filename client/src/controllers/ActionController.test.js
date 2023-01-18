@@ -23,7 +23,6 @@ describe('ActionController', () => {
     window.HTMLFormElement.prototype.submit = submitMock;
 
     btn.click();
-
     const form = document.querySelector('form');
 
     expect(submitMock).toHaveBeenCalled();

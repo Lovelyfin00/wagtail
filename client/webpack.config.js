@@ -40,6 +40,7 @@ module.exports = function exports(env, argv) {
       'draftail',
       'expanding-formset',
       'filtered-select',
+      'icons',
       'modal-workflow',
       'page-chooser-modal',
       'page-chooser',
